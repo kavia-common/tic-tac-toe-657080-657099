@@ -1,82 +1,46 @@
-# Lightweight React Template for KAVIA
+# Tic Tac Toe Web App (React)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A lightweight, modern React SPA implementing a classic two-player Tic Tac Toe game. Fully client-side with responsive UI, win/draw detection, reset, and Cypress test scaffolding.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Interactive 3x3 board with accessible buttons
+- Turn management with clear player indicators
+- Win and draw detection, with a summary and winning line info
+- Reset button to start a new game
+- Responsive design and theme toggle (light/dark)
+- Jest + React Testing Library unit tests
+- Cypress end-to-end tests scaffolding
 
 ## Getting Started
 
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode.  
+Open http://localhost:3000 to view it in your browser.
 
 ### `npm test`
-
-Launches the test runner in interactive watch mode.
+Launches the unit test runner in interactive watch mode.
 
 ### `npm run build`
+Builds the app for production to the `build` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## End-to-End Tests (Cypress)
 
-## Customization
+This project includes Cypress for UI and functional testing.
 
-### Colors
+- `npm run cypress:open` – Open Cypress Test Runner (ensure the dev server is running with `npm start`)
+- `npm run cypress:run` – Run Cypress tests in headless mode (ensure the dev server is running)
+- `npm run e2e` – Starts the dev server and runs Cypress tests automatically via `start-server-and-test`
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+Cypress config is in `cypress.config.js` and test specs are in `cypress/e2e/`.
 
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+## Notes
 
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+- This app is entirely client-side; no backend or external APIs.
+- Styles are in `src/App.css`; adjust CSS variables or classes to customize the look and feel.
 
 ## Learn More
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
